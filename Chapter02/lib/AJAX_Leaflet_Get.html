@@ -12,7 +12,7 @@
         map.setView([37.8, -96], 4);
 
         async function loadGeoJSON() {
-            const url = 'data/MegaCities.geojson';
+            const url = 'http://127.0.0.1:5500/data/MegaCities.geojson'; //chnged path from local to server and works.
             const response = await fetch(url);
             const geojson = await response.json();
             return geojson;
