@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="my_map" style="height: 600px"></div>
+    <script>
+        const map = L.map('my_map');
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        map.setView([37.8, -96], 4);
+
+        async function loadGeoJSON() {
+            const url = 'D:\CLASSES\Geog575\RepoSebree993\week2_morecontent\unit-master-week02\Chapter02\data\MegaCities.geojson';
+            const response = await fetch(url);
+            const geojson = await response.json();
+            return geojson;
+        }
+
+        loadGeoJSON().then((geojson) => {
+            L.geoJson(geojson).addTo(map);
+        });
+    </script>
+</body>
+</html>

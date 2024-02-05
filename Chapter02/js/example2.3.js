@@ -1,9 +1,9 @@
-//initialize function called when script loads
+//initialize function called when script loads could this be the same as window.onload = function(); 
 function initialize(){
     cities();
 };
 
-//function to create a table with cities and their populations
+//function to create a table with cities and their populations 
 function cities(){
     var cities = [
         'Madison',
@@ -32,6 +32,11 @@ function cities(){
     //add population column to header row
     var popHeader = document.createElement("th");
     popHeader.innerHTML = "Population";
+    headerRow.appendChild(popHeader);
+
+    //add THIRD column to header row
+    var popHeader = document.createElement("th");
+    popHeader.innerHTML = "THIRD";
     headerRow.appendChild(popHeader);
 
     //add the header row
