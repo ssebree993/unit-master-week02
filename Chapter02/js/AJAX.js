@@ -1,5 +1,5 @@
 function jsAjax(){
-    fetch('data/MegaCities.geojson')
+    fetch('http://127.0.0.1:5500/data/MegaCities.geojson')
         .then(callback) 
 };
 
