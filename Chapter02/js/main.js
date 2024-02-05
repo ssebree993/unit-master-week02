@@ -18,5 +18,11 @@ myDiv.innerHTML = "Welcome to my web page getElementById method";
 window.onload = myFunc(); 
 */
 
-//Third COM function not working yet. Will need to research more.
+//AJA request for data test
 
+function jsAjax(){
+    // Step 1: Define the data request
+    var request = new Request('data/MegaCities.geojson');
+};
+
+window.onload = jsAjax();

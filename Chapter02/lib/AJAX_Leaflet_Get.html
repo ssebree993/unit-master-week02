@@ -12,7 +12,7 @@
         map.setView([37.8, -96], 4);
 
         async function loadGeoJSON() {
-            const url = 'D:\CLASSES\Geog575\RepoSebree993\week2_morecontent\unit-master-week02\Chapter02\data\MegaCities.geojson';
+            const url = 'data/MegaCities.geojson';
             const response = await fetch(url);
             const geojson = await response.json();
             return geojson;
